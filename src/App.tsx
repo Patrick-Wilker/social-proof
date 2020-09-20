@@ -1,11 +1,18 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
 import Routes from './routes';
+
+import {colors} from './assets/styles/_variables';
+import GlobalStyle from './assets/styles/global';
 
 function App() {
   return (
     <>
-        <Routes/>
+        <ThemeProvider theme={colors}>
+            <Routes/>
+            <GlobalStyle/>
+        </ThemeProvider>
     </>
   );
 }
